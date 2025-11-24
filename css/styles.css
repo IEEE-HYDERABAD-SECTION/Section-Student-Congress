@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Custom Color Palette based on IEEE */
+:root {
+  --ieee-blue: #00629b;
+  --ieee-dark: #002855;
+}
+
+.text-ieee-blue {
+  color: var(--ieee-blue);
+}
+
+.bg-ieee-blue {
+  background-color: var(--ieee-blue);
+}
+
+.text-ieee-dark {
+  color: var(--ieee-dark);
+}
+
+/* Network Background Canvas */
+#network-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Dropdown Animation */
+.group:hover .group-hover\:visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card Hover Effect */
+.stat-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* Floating Animation for Hero Images */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 7s ease-in-out infinite 1s;
+}
+
+/* Tab Transitions */
+.tab-content {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tab-active {
+  border-bottom: 2px solid var(--ieee-blue);
+  color: var(--ieee-blue);
+}

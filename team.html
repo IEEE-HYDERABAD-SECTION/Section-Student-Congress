@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team - IEEE Hyderabad Section SAC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden flex flex-col min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center cursor-pointer">
+          <a href="index.html">
+            <!-- Simple IEEE Logo SVG Representation -->
+            <svg class="h-8 w-auto text-ieee-blue" viewBox="0 0 100 30" fill="currentColor">
+              <path d="M10,15 L20,5 L30,15 L20,25 Z" fill="none" stroke="currentColor" stroke-width="3" />
+              <path d="M20,5 V25 M10,15 H30" stroke="currentColor" stroke-width="2" />
+              <text x="35" y="22" font-family="Arial" font-weight="bold" font-size="20">IEEE</text>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="index.html" class="text-slate-600 hover:text-ieee-blue font-medium transition">Home</a>
+
+          <!-- Explore Dropdown -->
+          <div class="relative group">
+            <button
+              class="flex items-center text-slate-600 hover:text-ieee-blue font-medium transition focus:outline-none">
+              Explore
+            </button>
+            <div
+              class="absolute left-1/2 transform -translate-x-1/2 top-full mt-2 w-80 bg-white rounded-xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:visible transition-all duration-200 ease-out p-4 z-50">
+              <a href="event-congress-2024.html" class="flex items-start p-3 rounded-lg hover:bg-slate-50 transition">
+                <div class="bg-blue-50 p-2 rounded-md text-ieee-blue mr-4">
+                  <i data-lucide="calendar" class="h-5 w-5"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-slate-900">IEEE Hyderabad Section Student Congress 2024</h4>
+                  <p class="text-sm text-slate-500 mt-1">A celebration of innovation and excellence.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <a href="team.html" class="text-slate-600 hover:text-ieee-blue font-medium transition">About Us</a>
+          <a href="sponsors.html" class="text-slate-600 hover:text-ieee-blue font-medium transition">Sponsors</a>
+          <a href="gallery.html" class="text-slate-600 hover:text-ieee-blue font-medium transition">Gallery</a>
+          <a href="contact.html" class="text-slate-600 hover:text-ieee-blue font-medium transition">Contact</a>
+        </div>
+
+        <!-- Right Side Actions -->
+        <div class="flex items-center space-x-4">
+          <button class="p-2 text-slate-600 hover:text-ieee-blue transition rounded-full hover:bg-slate-100">
+            <i data-lucide="moon" class="h-5 w-5"></i>
+          </button>
+          <!-- Mobile Menu Button -->
+          <button class="md:hidden p-2 text-slate-600 hover:text-ieee-blue transition"
+            onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <i data-lucide="menu" class="h-6 w-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-ieee-blue hover:bg-slate-50">Home</a>
+        <a href="event-congress-2024.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-ieee-blue hover:bg-slate-50">IEEE
+          Hyderabad Section Student Congress 2024</a>
+        <a href="team.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-ieee-blue hover:bg-slate-50">About
+          Us</a>
+        <a href="sponsors.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-ieee-blue hover:bg-slate-50">Sponsors</a>
+        <a href="gallery.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-ieee-blue hover:bg-slate-50">Gallery</a>
+        <a href="contact.html"
+          class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-ieee-blue hover:bg-slate-50">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Team Page Content -->
+  <main>
+    <section class="py-20 bg-slate-50 min-h-screen">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-slate-900 mb-4">Meet Our People</h2>
+          <p class="text-slate-600 max-w-2xl mx-auto">The dedicated individuals who make everything possible.</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="flex justify-center mb-12">
+          <div class="border-b border-slate-200 w-full max-w-2xl flex justify-around">
+            <button onclick="switchTab('advisory')" id="tab-advisory"
+              class="pb-3 px-4 font-medium text-slate-500 hover:text-ieee-blue transition tab-active">
+              Advisory
+            </button>
+            <button onclick="switchTab('team')" id="tab-team"
+              class="pb-3 px-4 font-medium text-slate-500 hover:text-ieee-blue transition">
+              Team
+            </button>
+            <button onclick="switchTab('organising-committee')" id="tab-organising-committee"
+              class="pb-3 px-4 font-medium text-slate-500 hover:text-ieee-blue transition">
+              Organising Committee
+            </button>
+          </div>
+        </div>
+
+        <!-- Advisory Tab Content -->
+        <div id="content-advisory"
+          class="tab-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div class="flex flex-col items-center text-center">
+            <div class="w-40 h-40 rounded-full overflow-hidden mb-4 border-4 border-white shadow-lg">
+              <img src="images/advisory/mgplnarayana.jpg" alt="Mr. MGPL Narayana" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Mr. MGPL Narayana</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Chair</p>
+            <p class="text-xs text-slate-500 text-center">Former Vice President & Chief Scientist, TCS</p>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div class="w-40 h-40 rounded-full overflow-hidden mb-4 border-4 border-white shadow-lg">
+              <img src="images/advisory/balaprasad.jpg" alt="Mr. Bala Prasad Peddigari"
+                class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Mr. Bala Prasad Peddigari</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Vice Chair</p>
+            <p class="text-xs text-slate-500 text-center">Chief Innovation Officer, TCS</p>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div class="w-40 h-40 rounded-full overflow-hidden mb-4 border-4 border-white shadow-lg">
+              <img src="images/advisory/mnvenkatesh.jpg" alt="Mr. N. Venkatesh" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Mr. N. Venkatesh</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Secretary</p>
+            <p class="text-xs text-slate-500 text-center">Senior Director, Engineering, Silicon Labs</p>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div class="w-40 h-40 rounded-full overflow-hidden mb-4 border-4 border-white shadow-lg">
+              <img src="images/advisory/sreenivasjasti.jpg" alt="Mr. Sreenivas Jasti" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Mr. Sreenivas Jasti</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Treasurer</p>
+            <p class="text-xs text-slate-500 text-center">Delivery Head, Communications & Media, TCS</p>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div class="w-40 h-40 rounded-full overflow-hidden mb-4 border-4 border-white shadow-lg">
+              <img src="images/advisory/vijayalata.jpg" alt="Dr. Y. Vijayalatha Reddy" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Dr. Y. Vijayalatha Reddy</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Immediate Past Chair</p>
+            <p class="text-xs text-slate-500 text-center">Academic Administrator, Vardhaman College of Engineering</p>
+          </div>
+        </div>
+
+        <!-- Team Tab Content (Hidden by default) -->
+        <div id="content-team"
+          class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+
+          <!-- Student Network 2025-26 -->
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/VivinChandraP.jpg" alt="Vivin Chandrra Paasam" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Vivin Chandrra Paasam</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Section Student Representative (SSR)</p>
+            <p class="text-xs text-slate-500 text-center">Vardhaman College of Engineering</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/Sanjana_A.png" alt="G Anagha Sanjana" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">G Anagha Sanjana</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">VNR VJIET, Hyderabad</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/Digvijay_R.png" alt="Digvijay Rajoria" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Digvijay Rajoria</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">Koneru Lakshmaiah Education Foundation, Hyderabad</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/YashwanthSarma.jpg" alt="N. Yashwanth Sarma" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">N. Yashwanth Sarma</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">Chaitanya Bharati Institute of Technology, Hyderabad</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/RAKESHVYNALA.jpg" alt="Rakesh Vynala" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Rakesh Vynala</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">Vaagdevi Engineering College</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/RATNAMANILIKHITHA.png" alt="Ratnamani Likhitha Sathinedi"
+                class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Ratnamani Likhitha Sathinedi</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">G. Narayanamma Institute of Technology and Science</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/yogeeshwar.jpeg" alt="B. Yogeeshwar Reddy" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">B. Yogeeshwar Reddy</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">CVR College of Engineering</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/ByreddyKavya.jpg" alt="Byreddy Kavya" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Byreddy Kavya</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">Rajeev Gandhi Memorial College of Engineering and Technology</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/sirinireddy.jpeg" alt="Palle Shirini Reddy" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Palle Shirini Reddy</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">Sreyas Institute of Engineering and Technology</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/SiddhaTopalle.jpg" alt="Topalle Siddha Sankalp" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Topalle Siddha Sankalp</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">Vardhaman College of Engineering</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/JoelSandeepBoggavarapu.jpg" alt="Joel Sandeep Boggavarapu"
+                class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Joel Sandeep Boggavarapu</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">QIS College of Engineering and Technology</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/NagaSaiAkhil.jpg" alt="M Naga Sai Akhil" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">M Naga Sai Akhil</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">MVSR Engineering College</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/FirozKhan.jpg" alt="Patan Firoz Khan" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Patan Firoz Khan</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">Rajeev Gandhi Memorial College of Engineering and Technology</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/Soma_Sekhar.png" alt="P Somasekhar Reddy" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">P Somasekhar Reddy</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">Santhiram Engineering College, Anantapur</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/KeerthanSainath.jpeg" alt="Keerthan Sainath" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Keerthan Sainath</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">Sreenidhi Institute of Science and Technology</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/Harshithadurgaraju.jpg" alt="Durgaraju Kanaka Harshita"
+                class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Durgaraju Kanaka Harshita</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">KL University</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/RamaDeekshitha.jpg" alt="Y Rama Deekshitha" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Y Rama Deekshitha</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">G Pulla Reddy Engineering College</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/ShaikAman.jpg" alt="Shaik Aman" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Shaik Aman</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">Sree Rama Engineering College</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/anikethgandhari.jpg" alt="Aniketh Gandhari" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Aniketh Gandhari</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">Vardhaman College of Engineering</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/AmulyaSharon.jpeg" alt="Amulya Sharon" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Amulya Sharon</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">G. Narayanamma Institute of Technology and Science</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/snteam_2025-26/GhufranMohammad.jpg" alt="Ghufran Mohammad" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Ghufran Mohammad</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">CVR College of Engineering</p>
+          </div>
+
+        </div>
+
+        <!-- Organising Committee Tab Content (Hidden by default) -->
+        <div id="content-organising-committee"
+          class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/organisingteam/sreelakshmi.png" alt="Dr. G. Sree Lakshmi" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Dr. G. Sree Lakshmi</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Chair, Student Activities Committee</p>
+            <p class="text-xs text-slate-500 text-center">Professor, CVR College of Engineering</p>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/organisingteam/vivinchandra.jpg" alt="Vivin Chandra Paasam"
+                class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Vivin Chandra Paasam</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Section Student Representative</p>
+            <p class="text-xs text-slate-500 text-center">IEEE Hyderabad Section</p>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/organisingteam/anaghasanjana.png" alt="Anagha Sanjana" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Anagha Sanjana</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">IEEE Hyderabad Section</p>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div
+              class="w-36 h-36 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md hover:scale-105 transition duration-300">
+              <img src="images/organisingteam/digvijay.png" alt="Digvijay Rajoria" class="w-full h-full object-cover">
+            </div>
+            <h3 class="font-bold text-lg text-slate-900">Digvijay Rajoria</h3>
+            <p class="text-sm text-ieee-blue font-medium mb-1">Student Network Member</p>
+            <p class="text-xs text-slate-500 text-center">IEEE Hyderabad Section</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-white font-bold text-lg mb-4">IEEE Hyderabad Section SAC</h3>
+          <p class="text-sm leading-relaxed text-slate-400">
+            Empowering students to build a better tomorrow through technology and innovation.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-white font-bold text-lg mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+            <li><a href="team.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="#" class="hover:text-white transition">Events</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-bold text-lg mb-4">Connect</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-white transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+            <a href="#" class="hover:text-white transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+            <a href="#" class="hover:text-white transition"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-white font-bold text-lg mb-4">Contact</h3>
+          <p class="text-sm text-slate-400">IEEE Hyderabad Section Office,<br>Hyderabad, Telangana</p>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-slate-800 text-center text-sm text-slate-500">
+        &copy; 2025 IEEE Hyderabad Section SAC. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
