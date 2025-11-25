@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IEEE Hyderabad Section SAC</title>
+  <title>IEEE Hyderabad Section Student Congress 2025 - IEEE Hyderabad Section SAC</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
   <link rel="stylesheet" href="css/styles.css">
@@ -95,144 +95,138 @@
 
   <!-- Home Page Content -->
   <main>
-    <!-- Hero Section -->
-    <section class="relative pt-20 pb-32 overflow-hidden bg-gradient-to-b from-blue-50/50 to-white">
-      <!-- Canvas Background -->
-      <canvas id="network-canvas"></canvas>
-
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-        <p class="text-ieee-blue font-semibold tracking-wide uppercase mb-4 text-sm md:text-base animate-fade-in-up">
-          IEEE Hyderabad Section SAC</p>
-        <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
-          Empowering<br>
-          <span class="text-ieee-blue">Innovation</span>
-          Together
-        </h1>
-        <p class="max-w-2xl mx-auto text-lg text-slate-600 mb-10">
-          Join the world's largest technical professional organization and be part of the future of technology.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
-          <button
-            class="px-8 py-3 bg-[#00629B] text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition transform hover:-translate-y-0.5">Explore
-            Events</button>
-          <button
-            class="px-8 py-3 bg-transparent text-[#00629B] border-2 border-[#00629B] font-semibold rounded-lg hover:bg-blue-50 transition transform hover:-translate-y-0.5">Join
-            IEEE</button>
-        </div>
-        <div class="flex items-center justify-center gap-4 mb-8">
-          <div class="flex -space-x-3">
-            <img class="w-10 h-10 rounded-full border-2 border-white"
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64"
-              alt="User">
-            <img class="w-10 h-10 rounded-full border-2 border-white"
-              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64"
-              alt="User">
-            <img class="w-10 h-10 rounded-full border-2 border-white"
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=64&h=64"
-              alt="User">
-            <div
-              class="w-10 h-10 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-600">
-              +1.5k</div>
-          </div>
-          <p class="text-sm font-medium text-slate-600">Join 1500+ members in our community</p>
+    <!-- Hero Section with Poster -->
+    <section class="relative pt-20 pb-16 bg-gradient-to-b from-blue-50/50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <p class="text-ieee-blue font-semibold tracking-wide uppercase mb-4 text-sm md:text-base">
+            IEEE Hyderabad Section SAC</p>
+          <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
+            IEEE Hyderabad Section<br>
+            <span class="text-ieee-blue">Student Congress 2025</span>
+          </h1>
+          <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-600 mb-8">
+            Join us for a celebration of innovation, collaboration, and excellence. Connect with student leaders, 
+            industry experts, and fellow IEEE members from across the Hyderabad Section.
+          </p>
         </div>
 
-        <!-- Floating Images -->
-        <div
-          class="hidden lg:block absolute top-0 left-10 transform -rotate-6 hover:rotate-0 transition duration-500 animate-float">
-          <div class="w-48 h-32 bg-slate-200 rounded-xl overflow-hidden shadow-lg border-4 border-white">
-            <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=400&q=80"
-              alt="Concert" class="w-full h-full object-cover">
+        <!-- Poster and Registration Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-16">
+          <!-- Event Poster -->
+          <div class="order-2 lg:order-1">
+            <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+              <img src="images/logos/sscposter2025.jpg" 
+                   alt="IEEE Hyderabad Section Student Congress 2025 Poster" 
+                   class="w-full h-auto object-cover">
+            </div>
+          </div>
+
+          <!-- Registration Widget -->
+          <div class="order-1 lg:order-2" id="registration">
+            <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-6 lg:p-8 sticky top-24">
+              <h2 class="text-2xl font-bold text-slate-900 mb-4">Register Now</h2>
+              <p class="text-slate-600 mb-6">
+                Secure your spot at the IEEE Hyderabad Section Student Congress 2025. 
+                Don't miss this opportunity to network, learn, and grow.
+              </p>
+              <div class="w-full" style="min-height: 500px;">
+                <iframe 
+                  src="https://www.meraevents.com/ticketWidget?eventId=268634&ucode=organizer&wcode=9063CD-9063CD-333333-9063CD-&theme=1&samepage=1"
+                  frameborder="0"
+                  scrolling="auto"
+                  style="width: 100%; min-height: 500px; border: none;"
+                  title="Event Registration Widget">
+                </iframe>
+              </div>
+            </div>
           </div>
         </div>
-        <div
-          class="hidden lg:block absolute bottom-10 left-32 transform rotate-3 hover:rotate-0 transition duration-500 animate-float-delayed">
-          <div class="w-40 h-40 bg-slate-200 rounded-xl overflow-hidden shadow-lg border-4 border-white">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80"
-              alt="Team" class="w-full h-full object-cover">
+
+        <!-- Quick Info Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <div class="bg-white rounded-xl p-6 shadow-lg border border-slate-100 text-center">
+            <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="calendar" class="w-8 h-8 text-ieee-blue"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">Event Date</h3>
+            <p class="text-slate-600">Coming Soon</p>
           </div>
-        </div>
-        <div
-          class="hidden lg:block absolute top-10 right-20 transform rotate-6 hover:rotate-0 transition duration-500 animate-float">
-          <div class="w-56 h-36 bg-slate-200 rounded-xl overflow-hidden shadow-lg border-4 border-white">
-            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=400&q=80"
-              alt="Workshop" class="w-full h-full object-cover">
+          <div class="bg-white rounded-xl p-6 shadow-lg border border-slate-100 text-center">
+            <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="map-pin" class="w-8 h-8 text-ieee-blue"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">Location</h3>
+            <p class="text-slate-600">Hyderabad, Telangana</p>
           </div>
-        </div>
-        <div
-          class="hidden lg:block absolute bottom-0 right-40 transform -rotate-3 hover:rotate-0 transition duration-500 animate-float-delayed">
-          <div class="w-44 h-32 bg-slate-200 rounded-xl overflow-hidden shadow-lg border-4 border-white">
-            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=400&q=80"
-              alt="Students" class="w-full h-full object-cover">
+          <div class="bg-white rounded-xl p-6 shadow-lg border border-slate-100 text-center">
+            <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="users" class="w-8 h-8 text-ieee-blue"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">Participants</h3>
+            <p class="text-slate-600">Student Leaders & Members</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Content Section -->
+    <!-- About the Event Section -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Dummy Text</h2>
-          <p class="text-xl text-ieee-blue font-medium">Advancing technology for the benefit of humanity.</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">About the Event</h2>
+          <p class="text-xl text-ieee-blue font-medium mb-4">A Flagship Student Congress</p>
           <p class="mt-4 text-slate-600 max-w-3xl mx-auto">
-            IEEE is the world's largest technical professional organization dedicated to advancing technology for the
-            benefit of humanity.
+            The IEEE Hyderabad Section Student Congress (SSC) serves as a flagship platform that unites students, 
+            educators, and professionals to exchange ideas, celebrate innovation, and foster collaboration. 
+            Through a blend of technical, professional, and leadership initiatives, SSC aims to inspire the next 
+            generation of engineers and innovators.
           </p>
         </div>
 
-        <!-- Stats Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
-          <div
-            class="stat-card bg-white p-8 rounded-2xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border border-slate-100">
-            <h3 class="text-4xl font-bold text-[#00629B] mb-2">500+</h3>
-            <p class="text-slate-600 font-medium">Members</p>
+        <!-- Event Highlights -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg border border-slate-100">
+            <div class="w-12 h-12 bg-ieee-blue rounded-lg flex items-center justify-center mb-4">
+              <i data-lucide="mic" class="w-6 h-6 text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Keynote Sessions</h3>
+            <p class="text-slate-600">Inspiring talks from industry leaders and experts</p>
           </div>
-          <div
-            class="stat-card bg-white p-8 rounded-2xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border border-slate-100">
-            <h3 class="text-4xl font-bold text-[#00629B] mb-2">50+</h3>
-            <p class="text-slate-600 font-medium">Events</p>
+          <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg border border-slate-100">
+            <div class="w-12 h-12 bg-ieee-blue rounded-lg flex items-center justify-center mb-4">
+              <i data-lucide="users" class="w-6 h-6 text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Networking</h3>
+            <p class="text-slate-600">Connect with peers and professionals</p>
           </div>
-          <div
-            class="stat-card bg-white p-8 rounded-2xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border border-slate-100">
-            <h3 class="text-4xl font-bold text-[#00629B] mb-2">4+</h3>
-            <p class="text-slate-600 font-medium">Societies</p>
+          <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg border border-slate-100">
+            <div class="w-12 h-12 bg-ieee-blue rounded-lg flex items-center justify-center mb-4">
+              <i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Workshops</h3>
+            <p class="text-slate-600">Hands-on learning experiences</p>
           </div>
-          <div
-            class="stat-card bg-white p-8 rounded-2xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border border-slate-100">
-            <h3 class="text-4xl font-bold text-[#00629B] mb-2">10+</h3>
-            <p class="text-slate-600 font-medium">Mentors</p>
+          <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg border border-slate-100">
+            <div class="w-12 h-12 bg-ieee-blue rounded-lg flex items-center justify-center mb-4">
+              <i data-lucide="award" class="w-6 h-6 text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Recognition</h3>
+            <p class="text-slate-600">Celebrate achievements and excellence</p>
           </div>
         </div>
 
-        <!-- About Section -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 class="text-3xl font-bold text-slate-900 mb-6">About IEEE Hyderabad Section SAC</h2>
-            <p class="text-slate-600 leading-relaxed mb-6">
-              IEEE Hyderabad Section Student Activities Committee is a vibrant community of student leaders, mentors,
-              and
-              volunteers representing institutes across Telangana and Andhra Pradesh. We collaborate to amplify the
-              impact of IEEE initiatives, champion innovation, and create meaningful opportunities for every student
-              branch in the section.
-            </p>
-            <p class="text-slate-600 leading-relaxed">
-              Guided by senior volunteers from industry and academia, the committee curates knowledge-sharing platforms,
-              mentorship programs, and flagship events that help students explore emerging technologies and develop
-              leadership skills. Together, we nurture a culture of service, professionalism, and lifelong learning
-              within
-              the IEEE Hyderabad Section.
-            </p>
-          </div>
-          <div class="relative">
-            <div class="aspect-video bg-slate-200 rounded-2xl overflow-hidden shadow-xl">
-              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
-                alt="About Us Image" class="w-full h-full object-cover">
-            </div>
-            <div
-              class="absolute -bottom-4 -right-4 w-24 h-24 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiMwMDYyOUIiIGZpbGwtb3BhY2l0eT0iMC4yIi8+PC9zdmc+')] z-[-1]">
-            </div>
-          </div>
+        <!-- Call to Action -->
+        <div class="bg-gradient-to-r from-ieee-blue to-blue-700 rounded-2xl p-8 md:p-12 text-center text-white shadow-2xl">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Join Us?</h2>
+          <p class="text-lg mb-8 text-blue-100 max-w-2xl mx-auto">
+            Be part of the largest student gathering in the IEEE Hyderabad Section. 
+            Register now and secure your spot at this transformative event.
+          </p>
+          <a href="#registration" 
+             class="inline-block px-8 py-4 bg-white text-ieee-blue font-semibold rounded-lg shadow-lg hover:bg-blue-50 transition transform hover:-translate-y-0.5">
+            Scroll to Register
+          </a>
         </div>
       </div>
     </section>
@@ -278,7 +272,6 @@
 
   <!-- JavaScript Files -->
   <script src="js/navigation.js"></script>
-  <script src="js/canvas.js"></script>
   <script src="js/main.js"></script>
 </body>
 
