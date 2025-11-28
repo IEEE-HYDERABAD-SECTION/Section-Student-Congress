@@ -83,3 +83,61 @@ body {
   border-bottom: 2px solid var(--ieee-blue);
   color: var(--ieee-blue);
 }
+
+/* Mobile Menu Animations */
+#mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 50;
+}
+
+#mobile-menu.menu-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+#mobile-menu.hidden {
+  display: none;
+}
+
+/* Mobile Menu Header Animation */
+#mobile-menu.menu-open > div:first-child {
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Mobile Menu Content Animation */
+#mobile-menu.menu-open > div:last-child {
+  animation: fadeInUp 0.4s ease-out 0.1s both;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -62,3 +62,63 @@ function switchTab(tabName) {
     selectedContent.classList.remove("hidden");
   }
 }
+
+/**
+ * Handle mobile navigation menu toggling
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileMenu = document.getElementById("mobile-menu");
+  if (!mobileMenu) return;
+
+  const body = document.body;
+  const openButtons = document.querySelectorAll('[data-mobile-menu="open"]');
+  const closeButtons = document.querySelectorAll('[data-mobile-menu="close"]');
+  const menuLinks = mobileMenu.querySelectorAll("a");
+
+  const setExpanded = (state) => {
+    openButtons.forEach((btn) => btn.setAttribute("aria-expanded", state ? "true" : "false"));
+    mobileMenu.setAttribute("aria-hidden", state ? "false" : "true");
+  };
+
+  const openMenu = () => {
+    // Remove hidden class first
+    mobileMenu.classList.remove("hidden");
+    // Force reflow to ensure display change takes effect
+    void mobileMenu.offsetHeight;
+    // Add menu-open class to trigger animation
+    requestAnimationFrame(() => {
+      mobileMenu.classList.add("menu-open");
+    });
+    body.classList.add("overflow-hidden");
+    setExpanded(true);
+  };
+
+  const closeMenu = () => {
+    // Remove open class first to trigger close animation
+    mobileMenu.classList.remove("menu-open");
+    // Wait for animation to complete before hiding
+    setTimeout(() => {
+      mobileMenu.classList.add("hidden");
+      body.classList.remove("overflow-hidden");
+      setExpanded(false);
+    }, 300); // Match CSS transition duration
+  };
+
+  openButtons.forEach((btn) => btn.addEventListener("click", openMenu));
+  closeButtons.forEach((btn) => btn.addEventListener("click", closeMenu));
+  menuLinks.forEach((link) => link.addEventListener("click", closeMenu));
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1024) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
+
+  setExpanded(false);
+});
