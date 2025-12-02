@@ -141,3 +141,15 @@ body {
     opacity: 1;
   }
 }
+
+/* Logo Constraints - Prevent logos from becoming too large */
+nav img[alt*="Logo"] {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Ensure logo container doesn't overflow */
+nav a[href*="index.html"] {
+  overflow: hidden;
+}

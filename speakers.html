@@ -17,7 +17,7 @@
     <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
       <div class="flex items-center justify-between h-16 lg:h-20">
         <!-- Logo Cluster -->
-        <a href="index.html" class="flex items-center gap-2 sm:gap-3 md:gap-4 min-w-0">
+        <a href="index.html" class="flex items-center gap-2 sm:gap-3 md:gap-4 min-w-0 max-w-[60%] sm:max-w-[70%]">
           <svg class="h-5 w-5 sm:h-6 sm:w-6 lg:h-9 lg:w-9 text-ieee-blue flex-shrink-0" viewBox="0 0 100 30"
             fill="currentColor" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
             <path d="M10,15 L20,5 L30,15 L20,25 Z" fill="none" stroke="currentColor" stroke-width="3" />
@@ -25,9 +25,9 @@
             <text x="35" y="22" font-family="Arial" font-weight="bold" font-size="20">IEEE</text>
           </svg>
           <img src="images/logos/ieeehydsection.jpg" alt="IEEE Hyderabad Section Logo"
-            class="h-5 sm:h-6 lg:h-9 w-auto object-contain flex-shrink-0">
+            class="h-5 sm:h-6 lg:h-9 max-h-9 w-auto max-w-[120px] sm:max-w-[150px] lg:max-w-[180px] object-contain flex-shrink-0">
           <img src="images/logos/studentnetworkteamlogo.jpg" alt="Student Network Team Logo"
-            class="h-5 sm:h-6 lg:h-9 w-auto object-contain flex-shrink-0">
+            class="h-5 sm:h-6 lg:h-9 max-h-9 w-auto max-w-[120px] sm:max-w-[150px] lg:max-w-[180px] object-contain flex-shrink-0">
         </a>
 
         <!-- Desktop Menu -->
@@ -82,15 +82,15 @@
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="fixed inset-0 hidden lg:hidden z-50 bg-white/95 backdrop-blur-xl">
       <div class="flex items-center justify-between px-4 py-4 border-b border-slate-200">
-        <div class="flex items-center gap-2">
-          <svg class="h-5 w-5 text-ieee-blue" viewBox="0 0 100 30" fill="currentColor" aria-hidden="true">
+        <div class="flex items-center gap-2 min-w-0 max-w-[60%]">
+          <svg class="h-5 w-5 text-ieee-blue flex-shrink-0" viewBox="0 0 100 30" fill="currentColor" aria-hidden="true">
             <path d="M10,15 L20,5 L30,15 L20,25 Z" fill="none" stroke="currentColor" stroke-width="3" />
             <path d="M20,5 V25 M10,15 H30" stroke="currentColor" stroke-width="2" />
             <text x="35" y="22" font-family="Arial" font-weight="bold" font-size="20">IEEE</text>
           </svg>
-          <img src="images/logos/ieeehydsection.jpg" alt="IEEE Hyderabad Section Logo" class="h-5 w-auto object-contain">
+          <img src="images/logos/ieeehydsection.jpg" alt="IEEE Hyderabad Section Logo" class="h-5 max-h-5 w-auto max-w-[100px] object-contain flex-shrink-0">
           <img src="images/logos/studentnetworkteamlogo.jpg" alt="Student Network Team Logo"
-            class="h-5 w-auto object-contain">
+            class="h-5 max-h-5 w-auto max-w-[100px] object-contain flex-shrink-0">
         </div>
         <button type="button" class="p-2 rounded-full text-slate-600 hover:text-ieee-blue hover:bg-slate-100 transition"
           data-mobile-menu="close" aria-label="Close navigation menu">

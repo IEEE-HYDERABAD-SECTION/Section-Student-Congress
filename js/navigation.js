@@ -33,17 +33,17 @@ function switchView(viewId) {
  */
 function switchTab(tabName) {
   const tabs = ["advisory", "team", "organising-committee"];
-  
+
   // Reset all tab styles
   tabs.forEach(tab => {
     const tabElement = document.getElementById("tab-" + tab);
     const contentElement = document.getElementById("content-" + tab);
-    
+
     if (tabElement) {
       tabElement.classList.remove("tab-active");
       tabElement.classList.replace("text-ieee-blue", "text-slate-500");
     }
-    
+
     if (contentElement) {
       contentElement.classList.add("hidden");
     }
@@ -52,12 +52,12 @@ function switchTab(tabName) {
   // Activate selected tab
   const selectedTab = document.getElementById("tab-" + tabName);
   const selectedContent = document.getElementById("content-" + tabName);
-  
+
   if (selectedTab) {
     selectedTab.classList.add("tab-active");
     selectedTab.classList.replace("text-slate-500", "text-ieee-blue");
   }
-  
+
   if (selectedContent) {
     selectedContent.classList.remove("hidden");
   }
@@ -67,58 +67,66 @@ function switchTab(tabName) {
  * Handle mobile navigation menu toggling
  */
 document.addEventListener("DOMContentLoaded", () => {
-  const mobileMenu = document.getElementById("mobile-menu");
-  if (!mobileMenu) return;
+  try {
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (!mobileMenu) return;
 
-  const body = document.body;
-  const openButtons = document.querySelectorAll('[data-mobile-menu="open"]');
-  const closeButtons = document.querySelectorAll('[data-mobile-menu="close"]');
-  const menuLinks = mobileMenu.querySelectorAll("a");
+    const body = document.body;
+    const openButtons = document.querySelectorAll('[data-mobile-menu="open"]');
+    const closeButtons = document.querySelectorAll(
+      '[data-mobile-menu="close"]'
+    );
+    const menuLinks = mobileMenu.querySelectorAll("a");
 
-  const setExpanded = (state) => {
-    openButtons.forEach((btn) => btn.setAttribute("aria-expanded", state ? "true" : "false"));
-    mobileMenu.setAttribute("aria-hidden", state ? "false" : "true");
-  };
+    const setExpanded = state => {
+      openButtons.forEach(btn =>
+        btn.setAttribute("aria-expanded", state ? "true" : "false")
+      );
+      mobileMenu.setAttribute("aria-hidden", state ? "false" : "true");
+    };
 
-  const openMenu = () => {
-    // Remove hidden class first
-    mobileMenu.classList.remove("hidden");
-    // Force reflow to ensure display change takes effect
-    void mobileMenu.offsetHeight;
-    // Add menu-open class to trigger animation
-    requestAnimationFrame(() => {
-      mobileMenu.classList.add("menu-open");
+    const openMenu = () => {
+      // Remove hidden class first
+      mobileMenu.classList.remove("hidden");
+      // Force reflow to ensure display change takes effect
+      void mobileMenu.offsetHeight;
+      // Add menu-open class to trigger animation
+      requestAnimationFrame(() => {
+        mobileMenu.classList.add("menu-open");
+      });
+      body.classList.add("overflow-hidden");
+      setExpanded(true);
+    };
+
+    const closeMenu = () => {
+      // Remove open class first to trigger close animation
+      mobileMenu.classList.remove("menu-open");
+      // Wait for animation to complete before hiding
+      setTimeout(() => {
+        mobileMenu.classList.add("hidden");
+        body.classList.remove("overflow-hidden");
+        setExpanded(false);
+      }, 300); // Match CSS transition duration
+    };
+
+    openButtons.forEach(btn => btn.addEventListener("click", openMenu));
+    closeButtons.forEach(btn => btn.addEventListener("click", closeMenu));
+    menuLinks.forEach(link => link.addEventListener("click", closeMenu));
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1024) {
+        closeMenu();
+      }
     });
-    body.classList.add("overflow-hidden");
-    setExpanded(true);
-  };
 
-  const closeMenu = () => {
-    // Remove open class first to trigger close animation
-    mobileMenu.classList.remove("menu-open");
-    // Wait for animation to complete before hiding
-    setTimeout(() => {
-      mobileMenu.classList.add("hidden");
-      body.classList.remove("overflow-hidden");
-      setExpanded(false);
-    }, 300); // Match CSS transition duration
-  };
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    });
 
-  openButtons.forEach((btn) => btn.addEventListener("click", openMenu));
-  closeButtons.forEach((btn) => btn.addEventListener("click", closeMenu));
-  menuLinks.forEach((link) => link.addEventListener("click", closeMenu));
-
-  window.addEventListener("resize", () => {
-    if (window.innerWidth >= 1024) {
-      closeMenu();
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeMenu();
-    }
-  });
-
-  setExpanded(false);
+    setExpanded(false);
+  } catch (error) {
+    console.error("Error initializing mobile menu:", error);
+  }
 });
