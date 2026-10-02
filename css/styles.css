@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 body {
   font-family: "Inter", sans-serif;
@@ -152,4 +152,183 @@ nav img[alt*="Logo"] {
 /* Ensure logo container doesn't overflow */
 nav a[href*="index.html"] {
   overflow: hidden;
+}
+
+/* Accessibility and anchors */
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ieee-blue);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+footer :focus-visible {
+  outline-color: #fff;
+}
+
+/* Display type: Archivo for headings, Inter for body */
+h1,
+h2,
+.font-display {
+  font-family: "Archivo", "Inter", sans-serif;
+}
+
+.hero-title {
+  font-weight: 800;
+  font-stretch: 106%;
+  font-size: clamp(2.375rem, 5.2vw, 3.875rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: clamp(1.625rem, 3.2vw, 2.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: var(--ieee-dark);
+  text-wrap: balance;
+}
+
+/* Focus ring on the dark hero and closing band */
+.on-dark:focus-visible {
+  outline-color: #fff;
+}
+
+/* Programme highlights: ruled list instead of cards */
+.highlight {
+  border-top: 1px solid #e2e8f0;
+  padding: 1.25rem 0 1.5rem;
+}
+
+.highlight h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.highlight p {
+  margin-top: 0.375rem;
+  color: #475569;
+}
+
+.highlight a {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ieee-blue);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.highlight a:hover {
+  color: var(--ieee-dark);
+}
+
+/* Programme timeline */
+.agenda {
+  --agenda-green: #00843d;
+  border-left: 2px solid #cbd5e1;
+}
+
+.agenda li {
+  position: relative;
+  padding: 0 0 1.5rem 1.5rem;
+}
+
+.agenda li:last-child {
+  padding-bottom: 0;
+}
+
+.agenda li::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 0.4rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--ieee-blue);
+  box-shadow: 0 0 0 4px #f8fafc;
+}
+
+.agenda-time {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ieee-blue);
+  font-variant-numeric: tabular-nums;
+}
+
+.agenda-item {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #0f172a;
+}
+
+.agenda-note {
+  margin-top: 0.125rem;
+  font-size: 0.9375rem;
+  color: #475569;
+}
+
+/* Breaks and arrivals sit back so the sessions stand out */
+.agenda li.is-minor::before {
+  background: #f8fafc;
+  border: 2px solid #94a3b8;
+}
+
+.agenda li.is-minor .agenda-time {
+  color: #475569;
+}
+
+.agenda li.is-minor .agenda-item {
+  font-weight: 400;
+  color: #334155;
+}
+
+/* Items that run alongside the main hall */
+.agenda li.is-parallel::before {
+  background: var(--agenda-green);
+}
+
+.agenda li.is-parallel .agenda-time,
+.agenda li.is-parallel .agenda-note,
+.agenda .is-parallel-note {
+  color: var(--agenda-green);
+  font-weight: 600;
+}
+
+@media (min-width: 640px) {
+  .agenda li {
+    display: grid;
+    grid-template-columns: 12.5rem 1fr;
+    column-gap: 1.5rem;
+    align-items: baseline;
+  }
+
+  .agenda-item {
+    font-size: 1.25rem;
+  }
 }

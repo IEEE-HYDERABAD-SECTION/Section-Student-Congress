@@ -111,7 +111,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     openButtons.forEach(btn => btn.addEventListener("click", openMenu));
     closeButtons.forEach(btn => btn.addEventListener("click", closeMenu));
-    menuLinks.forEach(link => link.addEventListener("click", closeMenu));
+    menuLinks.forEach(link =>
+      link.addEventListener("click", () => {
+        // Unlock scrolling first so same-page anchors (e.g. #programme) can scroll
+        body.classList.remove("overflow-hidden");
+        closeMenu();
+      })
+    );
 
     window.addEventListener("resize", () => {
       if (window.innerWidth >= 1024) {
