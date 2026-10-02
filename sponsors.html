@@ -14,7 +14,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config = { theme: { extend: { colors: { 'ieee-blue': '#00629b', 'ieee-dark': '#002855' } } } }</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
-  <link rel="stylesheet" href="css/styles.css?v=20261002">
+  <link rel="stylesheet" href="css/styles.css?v=20261002b">
 </head>
 
 <body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden flex flex-col min-h-screen">
@@ -150,14 +150,14 @@
           </p>
         </div>
 
-        <!-- Sponsor logo template: add one card per CONFIRMED 2026 sponsor only, inside a
-             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"> placed above the call-out.
-        <div class="bg-white border border-slate-200 rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col items-center gap-3 sm:gap-4 shadow-sm">
-          <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-slate-50 rounded-lg sm:rounded-xl flex items-center justify-center p-3 sm:p-4">
-            <img src="images/sponsors/<file>" alt="<Organisation> logo" class="max-h-full max-w-full object-contain">
-          </div>
+        <!-- Add one card per CONFIRMED 2026 sponsor only, by copying the <a> card below. -->
+        <div class="flex flex-wrap justify-center gap-4 sm:gap-6 mb-10 sm:mb-14">
+          <a href="https://ohminstitute.com/" target="_blank" rel="noopener"
+            class="w-56 bg-white border border-slate-200 rounded-2xl p-6 flex flex-col items-center gap-4 hover:border-ieee-blue transition-colors">
+            <img src="images/sponsors/ohm.png" alt="OHM logo" width="480" height="480" class="w-36 h-36 object-contain">
+            <span class="font-semibold text-slate-900">OHM</span>
+          </a>
         </div>
-        -->
 
         <div class="bg-white border border-slate-200 rounded-2xl p-8 sm:p-10 text-center shadow-sm">
           <h2 class="text-2xl sm:text-3xl font-bold mb-4">Partner with SSC</h2>
@@ -208,8 +208,8 @@
   </footer>
 
   <!-- JavaScript Files -->
-  <script src="js/navigation.js?v=20261002"></script>
-  <script src="js/main.js?v=20261002"></script>
+  <script src="js/navigation.js?v=20261002b"></script>
+  <script src="js/main.js?v=20261002b"></script>
 </body>
 
 </html>
