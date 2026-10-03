@@ -362,3 +362,50 @@ h2,
     column-gap: 0.75rem;
   }
 }
+
+/* Expandable entry details under the Poster Competition and Project Expo */
+.entry-details {
+  margin-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.entry-details summary {
+  cursor: pointer;
+  padding: 0.875rem 0;
+  font-weight: 600;
+  color: var(--ieee-blue);
+}
+
+.entry-details summary:hover {
+  color: var(--ieee-dark);
+}
+
+.entry-body {
+  padding-bottom: 1.25rem;
+  color: #475569;
+}
+
+.entry-body h3 {
+  margin-top: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.entry-body h3:first-child {
+  margin-top: 0;
+}
+
+.entry-body ul {
+  margin-top: 0.375rem;
+  padding-left: 1.125rem;
+  list-style: disc;
+}
+
+.entry-body li + li {
+  margin-top: 0.25rem;
+}
+
+.entry-body p {
+  margin-top: 0.375rem;
+}
